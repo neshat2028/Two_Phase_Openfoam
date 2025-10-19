@@ -29,8 +29,8 @@ divSchemes
 {
     div(rhoPhi,U)  Gauss linearUpwind grad(U);
     // OpenFOAM v13: use a run-time selectable interface compression scheme
-    // (e.g., MPLIC, PLIC, interfaceCompression, etc.). Must be prefixed by 'Gauss'.
-    div(phi,alpha)  Gauss interfaceCompression 1;
+    // Use MPLIC (robust for VoF in v13)
+    div(phi,alpha)  Gauss MPLIC;
     div(((rho*nuEff)*dev2(T(grad(U))))) Gauss linear;
 }
 
