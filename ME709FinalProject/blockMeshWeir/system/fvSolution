@@ -21,10 +21,7 @@ solvers
     {
         nAlphaCorr      2;
         nAlphaSubCycles 1;
-        cAlpha          1;
-
-        MULESCorr       yes;
-        nLimiterIter    5;
+        // OpenFOAM v13: cAlpha is deprecated and unused
 
         solver          smoothSolver;
         smoother        symGaussSeidel;
